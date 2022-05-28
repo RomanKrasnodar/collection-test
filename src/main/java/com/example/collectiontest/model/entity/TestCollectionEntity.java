@@ -15,11 +15,11 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @Table(name = "TEST_COLLECTIONS")
 public class TestCollectionEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "TC_ID")
     private Long id;
-
 
     @NotNull(message = "Не заполнено поле TC_Collection")
     @Column(name = "TC_Collection")
@@ -41,6 +41,5 @@ public class TestCollectionEntity {
     private Long startItemsQuantity;
 
     @Column(name = "TC_Description")
-    private Long description;
-
+    private String description;
 }
