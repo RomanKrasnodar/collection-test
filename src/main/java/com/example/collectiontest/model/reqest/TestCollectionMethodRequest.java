@@ -2,9 +2,17 @@ package com.example.collectiontest.model.reqest;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.validation.constraints.NotNull;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class TestCollectionMethodRequest {
 
@@ -32,5 +40,6 @@ public class TestCollectionMethodRequest {
      * Количество повторений
      */
     @JsonProperty("Iterations")
+    @NotNull(message = "Поле Iterations не может быть пустым")
     private Long iterations;
 }
