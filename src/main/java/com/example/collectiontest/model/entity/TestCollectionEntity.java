@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "TEST_COLLECTIONS")
+@Table(name = "TEST_COLLECTION")
 public class TestCollectionEntity {
 
     @Id
